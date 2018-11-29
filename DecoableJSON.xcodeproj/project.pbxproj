@@ -14,6 +14,8 @@
 		04642C5021ADB491009B9128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04642C4E21ADB491009B9128 /* LaunchScreen.storyboard */; };
 		04642C5921ADB4B4009B9128 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C5821ADB4B4009B9128 /* NetworkManager.swift */; };
 		04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C5A21ADCF45009B9128 /* GitHubUser.swift */; };
+		04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C7E21AE6D3A009B9128 /* UserViewModel.swift */; };
+		04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C8021AF6624009B9128 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		04642C5121ADB491009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04642C5821ADB4B4009B9128 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		04642C5A21ADCF45009B9128 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		04642C7E21AE6D3A009B9128 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		04642C8021AF6624009B9128 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				04642C4521ADB48F009B9128 /* AppDelegate.swift */,
-				04642C4721ADB48F009B9128 /* ViewController.swift */,
-				04642C5721ADB49F009B9128 /* New Group */,
+				04642C5821ADB4B4009B9128 /* NetworkManager.swift */,
+				04642C8321AF6BEB009B9128 /* Views */,
+				04642C8221AF6BD5009B9128 /* ViewModels */,
+				04642C5721ADB49F009B9128 /* Models */,
 				04642C4921ADB48F009B9128 /* Main.storyboard */,
 				04642C4C21ADB491009B9128 /* Assets.xcassets */,
 				04642C4E21ADB491009B9128 /* LaunchScreen.storyboard */,
@@ -69,13 +75,29 @@
 			path = DecoableJSON;
 			sourceTree = "<group>";
 		};
-		04642C5721ADB49F009B9128 /* New Group */ = {
+		04642C5721ADB49F009B9128 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04642C5821ADB4B4009B9128 /* NetworkManager.swift */,
 				04642C5A21ADCF45009B9128 /* GitHubUser.swift */,
 			);
-			path = "New Group";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04642C8221AF6BD5009B9128 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04642C7E21AE6D3A009B9128 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04642C8321AF6BEB009B9128 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04642C8021AF6624009B9128 /* CustomImageView.swift */,
+				04642C4721ADB48F009B9128 /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */,
+				04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */,
 				04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */,
 				04642C5921ADB4B4009B9128 /* NetworkManager.swift in Sources */,
 				04642C4821ADB48F009B9128 /* ViewController.swift in Sources */,

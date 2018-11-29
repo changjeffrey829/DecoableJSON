@@ -40,10 +40,4 @@ struct GitHubUser: Decodable {
     let following: Int
     let createdAt: String
     let updatedAt: String
-    
-//    func output() {
-//        let dic = [
-//
-//        ]
-//    }
 }
