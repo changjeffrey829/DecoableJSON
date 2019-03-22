@@ -9,31 +9,48 @@
 /* Begin PBXBuildFile section */
 		04642C4621ADB48F009B9128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C4521ADB48F009B9128 /* AppDelegate.swift */; };
 		04642C4821ADB48F009B9128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C4721ADB48F009B9128 /* ViewController.swift */; };
-		04642C4B21ADB48F009B9128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04642C4921ADB48F009B9128 /* Main.storyboard */; };
 		04642C4D21ADB491009B9128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04642C4C21ADB491009B9128 /* Assets.xcassets */; };
 		04642C5021ADB491009B9128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04642C4E21ADB491009B9128 /* LaunchScreen.storyboard */; };
-		04642C5921ADB4B4009B9128 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C5821ADB4B4009B9128 /* NetworkManager.swift */; };
 		04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C5A21ADCF45009B9128 /* GitHubUser.swift */; };
 		04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C7E21AE6D3A009B9128 /* UserViewModel.swift */; };
 		04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C8021AF6624009B9128 /* CustomImageView.swift */; };
+		04B5D6C8224550D000BD2A80 /* DecoableJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04B5D6CA224550D000BD2A80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04642C3A21ADB48F009B9128 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04642C4121ADB48F009B9128;
+			remoteInfo = DecoableJSON;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04642C4221ADB48F009B9128 /* DecoableJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecoableJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04642C4521ADB48F009B9128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04642C4721ADB48F009B9128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04642C4A21ADB48F009B9128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04642C4C21ADB491009B9128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04642C4F21ADB491009B9128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04642C5121ADB491009B9128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04642C5821ADB4B4009B9128 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		04642C5A21ADCF45009B9128 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
 		04642C7E21AE6D3A009B9128 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04642C8021AF6624009B9128 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecoableJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoableJSONTests.swift; sourceTree = "<group>"; };
+		04B5D6C9224550D000BD2A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		04642C3F21ADB48F009B9128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B5D6C2224550D000BD2A80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				04642C4421ADB48F009B9128 /* DecoableJSON */,
+				04B5D6C6224550D000BD2A80 /* DecoableJSONTests */,
 				04642C4321ADB48F009B9128 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				04642C4221ADB48F009B9128 /* DecoableJSON.app */,
+				04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,11 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				04642C4521ADB48F009B9128 /* AppDelegate.swift */,
-				04642C5821ADB4B4009B9128 /* NetworkManager.swift */,
 				04642C8321AF6BEB009B9128 /* Views */,
 				04642C8221AF6BD5009B9128 /* ViewModels */,
 				04642C5721ADB49F009B9128 /* Models */,
-				04642C4921ADB48F009B9128 /* Main.storyboard */,
 				04642C4C21ADB491009B9128 /* Assets.xcassets */,
 				04642C4E21ADB491009B9128 /* LaunchScreen.storyboard */,
 				04642C5121ADB491009B9128 /* Info.plist */,
@@ -100,6 +117,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		04B5D6C6224550D000BD2A80 /* DecoableJSONTests */ = {
+			isa = PBXGroup;
+			children = (
+				04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */,
+				04B5D6C9224550D000BD2A80 /* Info.plist */,
+			);
+			path = DecoableJSONTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +146,24 @@
 			productReference = 04642C4221ADB48F009B9128 /* DecoableJSON.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04B5D6C4224550D000BD2A80 /* DecoableJSONTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B5D6CE224550D000BD2A80 /* Build configuration list for PBXNativeTarget "DecoableJSONTests" */;
+			buildPhases = (
+				04B5D6C1224550D000BD2A80 /* Sources */,
+				04B5D6C2224550D000BD2A80 /* Frameworks */,
+				04B5D6C3224550D000BD2A80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04B5D6CB224550D000BD2A80 /* PBXTargetDependency */,
+			);
+			name = DecoableJSONTests;
+			productName = DecoableJSONTests;
+			productReference = 04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +176,10 @@
 				TargetAttributes = {
 					04642C4121ADB48F009B9128 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					04B5D6C4224550D000BD2A80 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04642C4121ADB48F009B9128;
 					};
 				};
 			};
@@ -149,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				04642C4121ADB48F009B9128 /* DecoableJSON */,
+				04B5D6C4224550D000BD2A80 /* DecoableJSONTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,7 +209,13 @@
 			files = (
 				04642C5021ADB491009B9128 /* LaunchScreen.storyboard in Resources */,
 				04642C4D21ADB491009B9128 /* Assets.xcassets in Resources */,
-				04642C4B21ADB48F009B9128 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B5D6C3224550D000BD2A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,23 +229,30 @@
 				04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */,
 				04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */,
 				04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */,
-				04642C5921ADB4B4009B9128 /* NetworkManager.swift in Sources */,
 				04642C4821ADB48F009B9128 /* ViewController.swift in Sources */,
 				04642C4621ADB48F009B9128 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04B5D6C1224550D000BD2A80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B5D6C8224550D000BD2A80 /* DecoableJSONTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		04642C4921ADB48F009B9128 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04642C4A21ADB48F009B9128 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		04B5D6CB224550D000BD2A80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04642C4121ADB48F009B9128 /* DecoableJSON */;
+			targetProxy = 04B5D6CA224550D000BD2A80 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		04642C4E21ADB491009B9128 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -354,6 +416,46 @@
 			};
 			name = Release;
 		};
+		04B5D6CC224550D000BD2A80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW4R4DYW79;
+				INFOPLIST_FILE = DecoableJSONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSONTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
+			};
+			name = Debug;
+		};
+		04B5D6CD224550D000BD2A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW4R4DYW79;
+				INFOPLIST_FILE = DecoableJSONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSONTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +473,15 @@
 			buildConfigurations = (
 				04642C5521ADB491009B9128 /* Debug */,
 				04642C5621ADB491009B9128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B5D6CE224550D000BD2A80 /* Build configuration list for PBXNativeTarget "DecoableJSONTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B5D6CC224550D000BD2A80 /* Debug */,
+				04B5D6CD224550D000BD2A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

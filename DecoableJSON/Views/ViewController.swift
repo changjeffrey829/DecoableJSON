@@ -10,28 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var userViewModel: UserViewModel?
+    var userViewModel = UserViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        view.backgroundColor = .white
     }
     
     @objc func searchUser() {
-        userViewModel = nil
         guard let text = searchTextField.text else {return}
-        NetworkManager.share.fetchData(username: text) { [unowned self] (user) in
-            guard let user = user else {return}
-            self.userViewModel = UserViewModel(user: user)
+        userViewModel.setGitHubUser(loginName: text) { [unowned self](err) in
+            if err != nil {
+                let alert = self.badUserSearchAlert()
+                self.present(alert, animated: true)
+                return
+            }
             self.loadUser()
         }
     }
     
+    private func badUserSearchAlert() -> UIAlertController {
+        let alert = UIAlertController(title: "User can not be found", message: "please try again", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "dismiss", style: .default, handler: nil)
+        alert.addAction(dismissAction)
+        return alert
+    }
+
+    
     private func loadUser() {
         DispatchQueue.main.async {
             self.searchTextField.text = ""
-            let profileUrl = self.userViewModel?.profileImageUrl()
-            let name = self.userViewModel?.userName()
+            let profileUrl = self.userViewModel.profileImageUrl()
+            let name = self.userViewModel.userName()
             self.profileImageView.loadImage(urlString: profileUrl)
             self.userNameLabel.text = name
         }
@@ -43,7 +54,7 @@ class ViewController: UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         view.addSubview(stackView)
-        stackView.backgroundColor = .blue
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
