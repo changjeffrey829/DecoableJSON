@@ -15,6 +15,7 @@
 		04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C7E21AE6D3A009B9128 /* UserViewModel.swift */; };
 		04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C8021AF6624009B9128 /* CustomImageView.swift */; };
 		04B5D6C8224550D000BD2A80 /* DecoableJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */; };
+		04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6CF22474AED00BD2A80 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecoableJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoableJSONTests.swift; sourceTree = "<group>"; };
 		04B5D6C9224550D000BD2A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B5D6CF22474AED00BD2A80 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				04642C4521ADB48F009B9128 /* AppDelegate.swift */,
+				04B5D6CF22474AED00BD2A80 /* StringExt.swift */,
 				04642C8321AF6BEB009B9128 /* Views */,
 				04642C8221AF6BD5009B9128 /* ViewModels */,
 				04642C5721ADB49F009B9128 /* Models */,
@@ -230,6 +233,7 @@
 				04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */,
 				04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */,
 				04642C4821ADB48F009B9128 /* ViewController.swift in Sources */,
+				04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */,
 				04642C4621ADB48F009B9128 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

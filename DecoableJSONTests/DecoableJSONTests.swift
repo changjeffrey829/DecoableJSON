@@ -18,18 +18,45 @@ class DecoableJSONTests: XCTestCase {
     }
     
     func testAddUser() {
-        
+        let stubLoginName = "changjeffrey829"
+        let stubName = "Jeffrey Chang"
+        let stubAvatarURL = "https://avatars0.githubusercontent.com/u/22721574?v=4"
+        let expectation = self.expectation(description: "addUserTest")
+        sut.setGitHubUser(loginName: stubLoginName) { [unowned self] (err) in
+            if err != nil {
+                self.tearDown()
+                XCTFail()
+            }
+            XCTAssertEqual(stubName, self.sut.userName(), "mismatched username")
+            XCTAssertEqual(stubAvatarURL, self.sut.profileImageUrl())
+            self.tearDown()
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10) { (error) in
+            if error != nil {
+                self.tearDown()
+                XCTFail()
+            }
+        }
     }
     
-    func testSwitchUser() {
-        
-    }
-    
-    func testUserName() {
-        let user = GitHubUser(login: "loginID", id: 1, nodeId: "nodeID", avatarUrl: "avatarUrl", gravatarId: "gravatarId", url: "url", htmlUrl: "htmlUrl", followersUrl: "followersUrl", followingUrl: "followingUrl", gistsUrl: "gistsUrl", starredUrl: "starredUrl", subscriptionsUrl: "subscriptionsUrl", organizationsUrl: "organizationsUrl", reposUrl: "reposUrl", eventsUrl: "eventsUrl", receivedEventsUrl: "receivedEventsUrl", type: "type", siteAdmin: false, name: "name", company: nil, blog: nil, location: nil, email: nil, hirable: nil, bio: nil, publicRepos: 1, publicGists: 1, followers: 1, following: 1, createdAt: "1/1/2018", updatedAt: "1/1/2019")
-        sut = UserViewModel()
-        XCTAssertEqual(user.name, sut.userName())
-        tearDown()
+    func testThrowErrorWithBadInput() {
+        let stubLoginName = "changjeffrey8291"
+        let expectation = self.expectation(description: "badInputTest")
+        expectation.isInverted = true
+        sut.setGitHubUser(loginName: stubLoginName) { [unowned self] (err) in
+            self.tearDown()
+            if err != nil {
+                return
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10) { (error) in
+            if error != nil {
+                self.tearDown()
+                XCTFail()
+            }
+        }
     }
     
     override func tearDown() {

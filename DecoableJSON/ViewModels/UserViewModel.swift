@@ -24,7 +24,7 @@ class UserViewModel {
     }
     
     func setGitHubUser(loginName: String, completion: @escaping (Error?) -> ()) {
-        let userText = loginName.lowercased()
+        let userText = loginName.lowercased().removeWhitespace()
         
         guard let gitUrl = URL(string: "https://api.github.com/users/" + userText) else {
             let err = SearchError.unableToFindUser
@@ -33,13 +33,12 @@ class UserViewModel {
         
         URLSession.shared.dataTask(with: gitUrl) { [unowned self] (data, response
             , error) in
-            
             guard let data = data else {
                 let err = SearchError.unableToFindUser
                 completion(err)
-                return }
+                return
+            }
             do {
-                
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let user = try decoder.decode(GitHubUser.self, from: data)

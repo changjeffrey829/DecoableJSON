@@ -22,9 +22,10 @@ class ViewController: UIViewController {
         guard let text = searchTextField.text else {return}
         userViewModel.setGitHubUser(loginName: text) { [unowned self](err) in
             if err != nil {
-                let alert = self.badUserSearchAlert()
-                self.present(alert, animated: true)
-                return
+                DispatchQueue.main.async {
+                    let alert = self.badUserSearchAlert()
+                    self.present(alert, animated: true)
+                }
             }
             self.loadUser()
         }
