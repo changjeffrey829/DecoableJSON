@@ -13,6 +13,12 @@ var imageCache = [String: UIImage]()
 class CustomImageView: UIImageView {
     
     var lastUrlUsedToLoadImage: String?
+    var dataSession: DataObjectProtocol
+    
+    init(image: UIImage, dataSession: DataObjectProtocol = URLSession.shared) {
+        self.dataSession = dataSession
+        super.init(image: image)
+    }
     
     func scaleImageToSize(size: CGSize) {
         UIGraphicsBeginImageContext(size)
@@ -25,6 +31,7 @@ class CustomImageView: UIImageView {
         self.image = scaledImage
         
     }
+    
     
     func loadImage(urlString: String?) {
         guard let urlString = urlString else {
@@ -40,7 +47,7 @@ class CustomImageView: UIImageView {
         
         guard let url = URL(string: urlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
+        dataSession.dataTask(with: url) { (data, response, err) in
             if let err = err {
                 print("Failed to fetch post image:", err)
                 return
@@ -61,6 +68,10 @@ class CustomImageView: UIImageView {
             }
             
             }.resume()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 

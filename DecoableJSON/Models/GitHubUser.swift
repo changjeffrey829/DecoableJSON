@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct GitHubUser: Decodable {
+protocol URLSessionDataTaskProtocol {
+    func resume()
+}
+
+struct GitHubUser: Decodable, Encodable {
     let login: String
     let id: Int
     let nodeId: String

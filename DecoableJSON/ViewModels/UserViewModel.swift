@@ -12,8 +12,19 @@ enum SearchError: Error {
     case unableToFindUser
 }
 
+protocol DataObjectProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+extension URLSession: DataObjectProtocol {}
+
 class UserViewModel {
     private var user: GitHubUser?
+    private var session: DataObjectProtocol
+    
+    init(session: DataObjectProtocol = URLSession.shared) {
+        self.session = session
+    }
     
     func profileImageUrl() -> String? {
         return user?.avatarUrl
@@ -31,7 +42,7 @@ class UserViewModel {
             completion(err)
             return }
         
-        URLSession.shared.dataTask(with: gitUrl) { [unowned self] (data, response
+        session.dataTask(with: gitUrl) { [unowned self] (data, response
             , error) in
             guard let data = data else {
                 let err = SearchError.unableToFindUser

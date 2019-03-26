@@ -14,7 +14,7 @@
 		04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C5A21ADCF45009B9128 /* GitHubUser.swift */; };
 		04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C7E21AE6D3A009B9128 /* UserViewModel.swift */; };
 		04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C8021AF6624009B9128 /* CustomImageView.swift */; };
-		04B5D6C8224550D000BD2A80 /* DecoableJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */; };
+		04B5D6C8224550D000BD2A80 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */; };
 		04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6CF22474AED00BD2A80 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		04642C7E21AE6D3A009B9128 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04642C8021AF6624009B9128 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecoableJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoableJSONTests.swift; sourceTree = "<group>"; };
+		04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		04B5D6C9224550D000BD2A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5D6CF22474AED00BD2A80 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +123,7 @@
 		04B5D6C6224550D000BD2A80 /* DecoableJSONTests */ = {
 			isa = PBXGroup;
 			children = (
-				04B5D6C7224550D000BD2A80 /* DecoableJSONTests.swift */,
+				04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */,
 				04B5D6C9224550D000BD2A80 /* Info.plist */,
 			);
 			path = DecoableJSONTests;
@@ -179,9 +179,11 @@
 				TargetAttributes = {
 					04642C4121ADB48F009B9128 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					04B5D6C4224550D000BD2A80 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 04642C4121ADB48F009B9128;
 					};
 				};
@@ -242,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B5D6C8224550D000BD2A80 /* DecoableJSONTests.swift in Sources */,
+				04B5D6C8224550D000BD2A80 /* UserViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -415,7 +417,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -434,7 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
 			};
@@ -454,7 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.DecoableJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
 			};
