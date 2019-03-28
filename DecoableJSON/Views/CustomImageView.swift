@@ -13,9 +13,9 @@ var imageCache = [String: UIImage]()
 class CustomImageView: UIImageView {
     
     var lastUrlUsedToLoadImage: String?
-    var dataSession: URLSession
+    var dataSession: DataSessionProtocol
     
-    init(image: UIImage, dataSession: URLSession = URLSession.shared) {
+    init(image: UIImage, dataSession: DataSessionProtocol = URLSession.shared) {
         self.dataSession = dataSession
         super.init(image: image)
     }
@@ -47,7 +47,7 @@ class CustomImageView: UIImageView {
         
         guard let url = URL(string: urlString) else { return }
         
-        dataSession.dataTask(with: url) { (data, response, err) in
+        dataSession.loadData(from: url) { (data, response, err) in
             if let err = err {
                 print("Failed to fetch post image:", err)
                 return
@@ -66,8 +66,7 @@ class CustomImageView: UIImageView {
             DispatchQueue.main.async {
                 self.image = photoImage
             }
-            
-            }.resume()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

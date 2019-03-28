@@ -19,7 +19,6 @@ extension URLSession: DataSessionProtocol {
         let task = dataTask(with: url) { (data, response, error) in
             completionHandler(data, response, error)
         }
-        
         task.resume()
     }
 }

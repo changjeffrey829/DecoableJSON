@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol URLSessionDataTaskProtocol {
-    func resume()
-}
-
 struct GitHubUser: Decodable, Encodable {
     let login: String
     let id: Int

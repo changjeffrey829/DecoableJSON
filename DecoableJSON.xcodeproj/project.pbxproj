@@ -15,7 +15,7 @@
 		04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C8021AF6624009B9128 /* CustomImageView.swift */; };
 		04B5D6C8224550D000BD2A80 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */; };
 		04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6CF22474AED00BD2A80 /* StringExt.swift */; };
-		04F3A9BC224C645A0029C722 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BB224C645A0029C722 /* NetworkProtocol.swift */; };
+		04F3A9BC224C645A0029C722 /* URLSessionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BB224C645A0029C722 /* URLSessionExt.swift */; };
 		04F3A9BE224C64A80029C722 /* MockSessionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BD224C64A80029C722 /* MockSessionObject.swift */; };
 		0C6D6DB23BE4F06C90FD5401 /* Pods_DecoableJSONTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F48DCBCE758D0E6FBA8329 /* Pods_DecoableJSONTests.framework */; };
 		3B7CEFC97344195F6B676233 /* Pods_DecoableJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C71A512E37E5F536E781A /* Pods_DecoableJSON.framework */; };
@@ -44,7 +44,7 @@
 		04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		04B5D6C9224550D000BD2A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5D6CF22474AED00BD2A80 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
-		04F3A9BB224C645A0029C722 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		04F3A9BB224C645A0029C722 /* URLSessionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExt.swift; sourceTree = "<group>"; };
 		04F3A9BD224C64A80029C722 /* MockSessionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionObject.swift; sourceTree = "<group>"; };
 		0B9C71A512E37E5F536E781A /* Pods_DecoableJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecoableJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45489BB9F6BACA4E11F2083F /* Pods-DecoableJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecoableJSON.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecoableJSON/Pods-DecoableJSON.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				04642C5A21ADCF45009B9128 /* GitHubUser.swift */,
-				04F3A9BB224C645A0029C722 /* NetworkProtocol.swift */,
 				04F3A9BD224C64A80029C722 /* MockSessionObject.swift */,
 			);
 			path = Models;
@@ -148,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				04B5D6CF22474AED00BD2A80 /* StringExt.swift */,
+				04F3A9BB224C645A0029C722 /* URLSessionExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 				04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */,
 				04642C8121AF6624009B9128 /* CustomImageView.swift in Sources */,
 				04642C5B21ADCF45009B9128 /* GitHubUser.swift in Sources */,
-				04F3A9BC224C645A0029C722 /* NetworkProtocol.swift in Sources */,
+				04F3A9BC224C645A0029C722 /* URLSessionExt.swift in Sources */,
 				04642C4821ADB48F009B9128 /* ViewController.swift in Sources */,
 				04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */,
 				04642C4621ADB48F009B9128 /* AppDelegate.swift in Sources */,
