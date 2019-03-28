@@ -13,9 +13,9 @@ var imageCache = [String: UIImage]()
 class CustomImageView: UIImageView {
     
     var lastUrlUsedToLoadImage: String?
-    var dataSession: DataObjectProtocol
+    var dataSession: URLSession
     
-    init(image: UIImage, dataSession: DataObjectProtocol = URLSession.shared) {
+    init(image: UIImage, dataSession: URLSession = URLSession.shared) {
         self.dataSession = dataSession
         super.init(image: image)
     }
