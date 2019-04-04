@@ -14,10 +14,10 @@ enum SearchError: Error {
 
 class UserViewModel {
     private var user: GitHubUser?
-    private var session: DataSessionProtocol
+    private var networkService: NetworkService
     
-    init(session: DataSessionProtocol = URLSession.shared) {
-        self.session = session
+    init(networkService: NetworkService = NetworkService()) {
+        self.networkService = networkService
     }
     
     func profileImageUrl() -> String? {
@@ -26,49 +26,18 @@ class UserViewModel {
     
     func userName() -> String? {
         return user?.name
+        
     }
     
-    func setGitHubUser(loginName: String, completion: @escaping (Error?) -> ()) {
-        let userText = loginName.lowercased().removeWhitespace()
-        guard let gitUrl = URL(string: "https://api.github.com/users/" + userText) else {
-            let err = SearchError.unableToFindUser
-            completion(err)
-            return }
-        session.loadData(from: gitUrl) { (data, response, error) in
-            guard let data = data else {
-                let err = SearchError.unableToFindUser
+    func getGitHubUser(loginName: String, completion: @escaping (Error?) -> ()) {
+        networkService.getGitHubUser(loginName: loginName) { (result) in
+            switch result {
+            case .failure(let err):
                 completion(err)
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let user = try decoder.decode(GitHubUser.self, from: data)
+            case .success(let user):
                 self.user = user
                 completion(nil)
-            } catch {
-                let err = SearchError.unableToFindUser
-                completion(err)
             }
         }
-//        let dataTask = session.dataTask(with: gitUrl) { [unowned self] (data, response
-//            , error) in
-//            guard let data = data else {
-//                let err = SearchError.unableToFindUser
-//                completion(err)
-//                return
-//            }
-//            do {
-//                let decoder = JSONDecoder()
-//                decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                let user = try decoder.decode(GitHubUser.self, from: data)
-//                self.user = user
-//                completion(nil)
-//            } catch {
-//                let err = SearchError.unableToFindUser
-//                completion(err)
-//            }
-//        }
-//        dataTask.resume()
     }
 }

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @objc func searchUser() {
         guard let text = searchTextField.text else {return}
-        userViewModel.setGitHubUser(loginName: text) { [unowned self](err) in
+        userViewModel.getGitHubUser(loginName: text) { [unowned self] (err) in
             if err != nil {
                 DispatchQueue.main.async {
                     let alert = self.badUserSearchAlert()

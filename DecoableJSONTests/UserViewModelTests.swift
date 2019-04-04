@@ -11,30 +11,41 @@ import XCTest
 
 class UserViewModelTests: XCTestCase {
     
-    func testAddUser() {
-        let stubLoginName = "changjeffrey829"
-        let stubName = "Jeffrey Chang"
-        let stubAvatarURL = "https://avatars0.githubusercontent.com/u/22721574?v=4"
+    func testViewModelShowUserName() {
+        let stubLoginName = MockSessionObject.mockUser.login
+        let stubName = MockSessionObject.mockUser.name
         var mockSession = MockSessionObject()
         let data = try? JSONEncoder().encode(MockSessionObject.mockUser)
         mockSession.data = data
-        let sut = UserViewModel(session: mockSession)
-        sut.setGitHubUser(loginName: stubLoginName) { (err) in
-            XCTAssertNil(err)
+        let mockNetwork = NetworkService(session: mockSession)
+        let sut = UserViewModel(networkService: mockNetwork)
+        sut.getGitHubUser(loginName: stubLoginName) { (_) in
             XCTAssertEqual(stubName, sut.userName(), "mismatched username")
-            XCTAssertEqual(stubAvatarURL, sut.profileImageUrl())
         }
     }
     
-    func testThrowErrorWithBadInput() {
+    func testViewModelShowUserProfileImageURL() {
+        let stubLoginName = MockSessionObject.mockUser.login
+        let stubProfileImageURL = MockSessionObject.mockUser.avatarUrl
         var mockSession = MockSessionObject()
-        mockSession.error = SearchError.unableToFindUser
-        let sut = UserViewModel(session: mockSession)
-        let stubLoginName = "changjeffrey8291"
-        sut.setGitHubUser(loginName: stubLoginName) { (err) in
-            XCTAssertNil(sut.userName())
-            XCTAssertNil(sut.profileImageUrl())
-            if err == nil {
+        let data = try? JSONEncoder().encode(MockSessionObject.mockUser)
+        mockSession.data = data
+        let mockNetwork = NetworkService(session: mockSession)
+        let sut = UserViewModel(networkService: mockNetwork)
+        sut.getGitHubUser(loginName: stubLoginName) { (_) in
+            XCTAssertEqual(stubProfileImageURL, sut.profileImageUrl(), "mismatched Profile Image URL")
+        }
+    }
+    
+    func testViewModelGetUserError() {
+        let stubLoginName = MockSessionObject.mockUser.login
+        let mockSession = MockSessionObject()
+        let mockNetwork = NetworkService(session: mockSession)
+        let sut = UserViewModel(networkService: mockNetwork)
+        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+            if let err = err {
+                XCTAssertEqual(err.localizedDescription, SearchError.unableToFindUser.localizedDescription)
+            } else {
                 XCTFail()
             }
         }
