@@ -17,6 +17,7 @@
 		04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6CF22474AED00BD2A80 /* StringExt.swift */; };
 		04D825AC2255DBE100FEFE39 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825AB2255DBE100FEFE39 /* NetworkService.swift */; };
 		04D825B02255DE5A00FEFE39 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825AF2255DE5A00FEFE39 /* NetworkServiceTests.swift */; };
+		04D825B82255E63600FEFE39 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825B72255E63600FEFE39 /* NetworkTests.swift */; };
 		04F3A9BC224C645A0029C722 /* URLSessionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BB224C645A0029C722 /* URLSessionExt.swift */; };
 		04F3A9BE224C64A80029C722 /* MockSessionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BD224C64A80029C722 /* MockSessionObject.swift */; };
 		0C6D6DB23BE4F06C90FD5401 /* Pods_DecoableJSONTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F48DCBCE758D0E6FBA8329 /* Pods_DecoableJSONTests.framework */; };
@@ -25,6 +26,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		04B5D6CA224550D000BD2A80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04642C3A21ADB48F009B9128 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04642C4121ADB48F009B9128;
+			remoteInfo = DecoableJSON;
+		};
+		04D825BA2255E63700FEFE39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04642C3A21ADB48F009B9128 /* Project object */;
 			proxyType = 1;
@@ -48,6 +56,9 @@
 		04B5D6CF22474AED00BD2A80 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		04D825AB2255DBE100FEFE39 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		04D825AF2255DE5A00FEFE39 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		04D825B52255E63600FEFE39 /* NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D825B72255E63600FEFE39 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		04D825B92255E63700FEFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F3A9BB224C645A0029C722 /* URLSessionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExt.swift; sourceTree = "<group>"; };
 		04F3A9BD224C64A80029C722 /* MockSessionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionObject.swift; sourceTree = "<group>"; };
 		0B9C71A512E37E5F536E781A /* Pods_DecoableJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecoableJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +86,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04D825B22255E63600FEFE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +101,7 @@
 			children = (
 				04642C4421ADB48F009B9128 /* DecoableJSON */,
 				04B5D6C6224550D000BD2A80 /* DecoableJSONTests */,
+				04D825B62255E63600FEFE39 /* NetworkTests */,
 				04642C4321ADB48F009B9128 /* Products */,
 				20411BB4E541138001360E83 /* Pods */,
 				2CF256B634808F495E5159E3 /* Frameworks */,
@@ -94,6 +113,7 @@
 			children = (
 				04642C4221ADB48F009B9128 /* DecoableJSON.app */,
 				04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */,
+				04D825B52255E63600FEFE39 /* NetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +167,15 @@
 				04B5D6C9224550D000BD2A80 /* Info.plist */,
 			);
 			path = DecoableJSONTests;
+			sourceTree = "<group>";
+		};
+		04D825B62255E63600FEFE39 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				04D825B72255E63600FEFE39 /* NetworkTests.swift */,
+				04D825B92255E63700FEFE39 /* Info.plist */,
+			);
+			path = NetworkTests;
 			sourceTree = "<group>";
 		};
 		04F3A9BA224C63CC0029C722 /* Extensions */ = {
@@ -218,13 +247,31 @@
 			productReference = 04B5D6C5224550D000BD2A80 /* DecoableJSONTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04D825B42255E63600FEFE39 /* NetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04D825BC2255E63700FEFE39 /* Build configuration list for PBXNativeTarget "NetworkTests" */;
+			buildPhases = (
+				04D825B12255E63600FEFE39 /* Sources */,
+				04D825B22255E63600FEFE39 /* Frameworks */,
+				04D825B32255E63600FEFE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04D825BB2255E63700FEFE39 /* PBXTargetDependency */,
+			);
+			name = NetworkTests;
+			productName = NetworkTests;
+			productReference = 04D825B52255E63600FEFE39 /* NetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		04642C3A21ADB48F009B9128 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jeffrey Chang";
 				TargetAttributes = {
@@ -235,6 +282,10 @@
 					04B5D6C4224550D000BD2A80 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						TestTargetID = 04642C4121ADB48F009B9128;
+					};
+					04D825B42255E63600FEFE39 = {
+						CreatedOnToolsVersion = 10.2;
 						TestTargetID = 04642C4121ADB48F009B9128;
 					};
 				};
@@ -254,6 +305,7 @@
 			targets = (
 				04642C4121ADB48F009B9128 /* DecoableJSON */,
 				04B5D6C4224550D000BD2A80 /* DecoableJSONTests */,
+				04D825B42255E63600FEFE39 /* NetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04B5D6C3224550D000BD2A80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04D825B32255E63600FEFE39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,6 +400,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04D825B12255E63600FEFE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D825B82255E63600FEFE39 /* NetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -348,6 +415,11 @@
 			isa = PBXTargetDependency;
 			target = 04642C4121ADB48F009B9128 /* DecoableJSON */;
 			targetProxy = 04B5D6CA224550D000BD2A80 /* PBXContainerItemProxy */;
+		};
+		04D825BB2255E63700FEFE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04642C4121ADB48F009B9128 /* DecoableJSON */;
+			targetProxy = 04D825BA2255E63700FEFE39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,6 +620,48 @@
 			};
 			name = Release;
 		};
+		04D825BD2255E63700FEFE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW4R4DYW79;
+				INFOPLIST_FILE = NetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.NetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
+			};
+			name = Debug;
+		};
+		04D825BE2255E63700FEFE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW4R4DYW79;
+				INFOPLIST_FILE = NetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.NetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecoableJSON.app/DecoableJSON";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +688,15 @@
 			buildConfigurations = (
 				04B5D6CC224550D000BD2A80 /* Debug */,
 				04B5D6CD224550D000BD2A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04D825BC2255E63700FEFE39 /* Build configuration list for PBXNativeTarget "NetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D825BD2255E63700FEFE39 /* Debug */,
+				04D825BE2255E63700FEFE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
