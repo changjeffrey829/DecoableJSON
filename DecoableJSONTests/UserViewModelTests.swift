@@ -11,6 +11,8 @@ import XCTest
 
 class UserViewModelTests: XCTestCase {
     
+    
+    
     func testViewModelShowUserName() {
         let stubLoginName = MockSessionObject.mockUser.login
         let stubName = MockSessionObject.mockUser.name
@@ -19,8 +21,12 @@ class UserViewModelTests: XCTestCase {
         mockSession.data = data
         let mockNetwork = NetworkService(session: mockSession)
         let sut = UserViewModel(networkService: mockNetwork)
-        sut.getGitHubUser(loginName: stubLoginName) { (_) in
-            XCTAssertEqual(stubName, sut.userName(), "mismatched username")
+        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+            if err != nil {
+                XCTFail()
+            } else {
+                XCTAssertEqual(stubName, sut.userName(), "mismatched username")
+            }
         }
     }
     
@@ -32,8 +38,12 @@ class UserViewModelTests: XCTestCase {
         mockSession.data = data
         let mockNetwork = NetworkService(session: mockSession)
         let sut = UserViewModel(networkService: mockNetwork)
-        sut.getGitHubUser(loginName: stubLoginName) { (_) in
-            XCTAssertEqual(stubProfileImageURL, sut.profileImageUrl(), "mismatched Profile Image URL")
+        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+            if err != nil {
+                XCTFail()
+            } else {
+                XCTAssertEqual(stubProfileImageURL, sut.profileImageUrl(), "mismatched Profile Image URL")
+            }
         }
     }
     

@@ -11,6 +11,28 @@ import XCTest
 
 class NetworkServiceTests: XCTestCase {
     
+    func testFindImage() {
+//        let mockString = ""
+//        var mockSession = MockSessionObject()
+//        let mockImage = #imageLiteral(resourceName: "mock_image")
+//        let data = #imageLiteral(resourceName: "mock_image").jpegData(compressionQuality: 1)
+//        let fakeimage = UIImage(data: data!)
+//        XCTAssertEqual(fakeimage!
+//            , mockImage)
+//        mockSession.data = data
+//        let sut = NetworkService(session: mockSession)
+//        sut.loadImage(urlString: "") { (result) in
+//            switch result {
+//            case .failure(_):
+////                XCTFail()
+//                print("fail to load image")
+//            case .success(let image):
+//                
+//                XCTAssertEqual(fakeimage, mockImage)
+//            }
+//        }
+    }
+    
     func testFindUser() {
         var mockSession = MockSessionObject()
         let mockLogin = MockSessionObject.mockUser.login
