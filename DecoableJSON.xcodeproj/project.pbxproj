@@ -14,12 +14,13 @@
 		04642C7F21AE6D3A009B9128 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C7E21AE6D3A009B9128 /* UserViewModel.swift */; };
 		04B5D6C8224550D000BD2A80 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */; };
 		04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5D6CF22474AED00BD2A80 /* StringExt.swift */; };
+		04BB0BF9228814B700DA8083 /* MockJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04BB0BF8228814B700DA8083 /* MockJSON.txt */; };
 		04D727742258766D00B10344 /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D727732258766D00B10344 /* GitHubView.swift */; };
 		04D825AC2255DBE100FEFE39 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825AB2255DBE100FEFE39 /* NetworkService.swift */; };
 		04D825B02255DE5A00FEFE39 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825AF2255DE5A00FEFE39 /* NetworkServiceTests.swift */; };
 		04D825B82255E63600FEFE39 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D825B72255E63600FEFE39 /* NetworkTests.swift */; };
 		04F3A9BC224C645A0029C722 /* URLSessionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BB224C645A0029C722 /* URLSessionExt.swift */; };
-		04F3A9BE224C64A80029C722 /* MockSessionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BD224C64A80029C722 /* MockSessionObject.swift */; };
+		04F3A9BE224C64A80029C722 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A9BD224C64A80029C722 /* MockSession.swift */; };
 		0C6D6DB23BE4F06C90FD5401 /* Pods_DecoableJSONTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F48DCBCE758D0E6FBA8329 /* Pods_DecoableJSONTests.framework */; };
 		3B7CEFC97344195F6B676233 /* Pods_DecoableJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C71A512E37E5F536E781A /* Pods_DecoableJSON.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		04B5D6C7224550D000BD2A80 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		04B5D6C9224550D000BD2A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B5D6CF22474AED00BD2A80 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		04BB0BF8228814B700DA8083 /* MockJSON.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MockJSON.txt; sourceTree = "<group>"; };
 		04D727732258766D00B10344 /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		04D825AB2255DBE100FEFE39 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		04D825AF2255DE5A00FEFE39 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		04D825B72255E63600FEFE39 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		04D825B92255E63700FEFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F3A9BB224C645A0029C722 /* URLSessionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExt.swift; sourceTree = "<group>"; };
-		04F3A9BD224C64A80029C722 /* MockSessionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionObject.swift; sourceTree = "<group>"; };
+		04F3A9BD224C64A80029C722 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		0B9C71A512E37E5F536E781A /* Pods_DecoableJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecoableJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45489BB9F6BACA4E11F2083F /* Pods-DecoableJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecoableJSON.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecoableJSON/Pods-DecoableJSON.release.xcconfig"; sourceTree = "<group>"; };
 		874F9C62421658B5CA603576 /* Pods-DecoableJSONTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecoableJSONTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DecoableJSONTests/Pods-DecoableJSONTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,8 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				04642C5A21ADCF45009B9128 /* GitHubUser.swift */,
-				04F3A9BD224C64A80029C722 /* MockSessionObject.swift */,
+				04F3A9BD224C64A80029C722 /* MockSession.swift */,
 				04D825AB2255DBE100FEFE39 /* NetworkService.swift */,
+				04BB0BF8228814B700DA8083 /* MockJSON.txt */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BB0BF9228814B700DA8083 /* MockJSON.txt in Resources */,
 				04642C4D21ADB491009B9128 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +399,7 @@
 				04642C4821ADB48F009B9128 /* GitHubViewController.swift in Sources */,
 				04B5D6D022474AED00BD2A80 /* StringExt.swift in Sources */,
 				04642C4621ADB48F009B9128 /* AppDelegate.swift in Sources */,
-				04F3A9BE224C64A80029C722 /* MockSessionObject.swift in Sources */,
+				04F3A9BE224C64A80029C722 /* MockSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

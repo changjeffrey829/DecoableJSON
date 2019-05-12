@@ -10,49 +10,38 @@ import XCTest
 @testable import DecoableJSON
 
 class UserViewModelTests: XCTestCase {
-    
-    
-    
+       
     func testViewModelShowUserName() {
-        let stubLoginName = MockSessionObject.mockUser.login
-        let stubName = MockSessionObject.mockUser.name
-        var mockSession = MockSessionObject()
-        let data = try? JSONEncoder().encode(MockSessionObject.mockUser)
-        mockSession.data = data
+        let mockSession = MockSession()
         let mockNetwork = NetworkService(session: mockSession)
         let sut = UserViewModel(networkService: mockNetwork)
-        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+        sut.getGitHubUser(loginName: "changjeffrey829") { (err) in
             if err != nil {
                 XCTFail()
             } else {
-                XCTAssertEqual(stubName, sut.userName(), "mismatched username")
+                XCTAssertEqual("Jeffrey Chang", sut.userName(), "mismatched username")
             }
         }
     }
     
     func testViewModelShowUserProfileImageURL() {
-        let stubLoginName = MockSessionObject.mockUser.login
-        let stubProfileImageURL = MockSessionObject.mockUser.avatarUrl
-        var mockSession = MockSessionObject()
-        let data = try? JSONEncoder().encode(MockSessionObject.mockUser)
-        mockSession.data = data
+        let mockSession = MockSession()
         let mockNetwork = NetworkService(session: mockSession)
         let sut = UserViewModel(networkService: mockNetwork)
-        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+        sut.getGitHubUser(loginName: "changjeffrey829") { (err) in
             if err != nil {
                 XCTFail()
             } else {
-                XCTAssertEqual(stubProfileImageURL, sut.profileImageUrl(), "mismatched Profile Image URL")
+                XCTAssertEqual("https://avatars0.githubusercontent.com/u/22721574?v=4", sut.profileImageUrl(), "mismatched Profile Image URL")
             }
         }
     }
     
     func testViewModelGetUserError() {
-        let stubLoginName = MockSessionObject.mockUser.login
-        let mockSession = MockSessionObject()
+        let mockSession = MockSession()
         let mockNetwork = NetworkService(session: mockSession)
         let sut = UserViewModel(networkService: mockNetwork)
-        sut.getGitHubUser(loginName: stubLoginName) { (err) in
+        sut.getGitHubUser(loginName: "dummyName") { (err) in
             if let err = err {
                 XCTAssertEqual(err.localizedDescription, SearchError.unableToFindUser.localizedDescription)
             } else {

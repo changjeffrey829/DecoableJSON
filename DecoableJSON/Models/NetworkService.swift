@@ -37,13 +37,18 @@ class NetworkService {
         }
     }
     
-    func getGitHubUser(loginName: String, completion: @escaping (Result<GitHubUser, Error>) -> ()) {
+    func getGitHubUser(loginName: String, completion: @escaping (Result<GitHubUser, SearchError>) -> ()) {
         let userText = loginName.lowercased().removeWhitespace()
         guard let gitUrl = URL(string: gitHubAPI + userText) else {
             let err = SearchError.unableToFindUser
             completion(.failure(err))
             return }
         session.loadData(from: gitUrl) { (data, response, error) in
+            if error != nil {
+                let err = SearchError.unableToFindUser
+                completion(.failure(err))
+                return
+            }
             guard let data = data else {
                 let err = SearchError.unableToFindUser
                 completion(.failure(err))
