@@ -10,9 +10,14 @@ import UIKit
 
 class GitHubViewController: UIViewController {
     
-    var userViewModel = UserViewModel()
+    var userViewModel: UserViewModel
     var gitHubView = GitHubView(frame: .zero)
-
+    
+    init(viewModel: UserViewModel) {
+        self.userViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -66,6 +71,10 @@ class GitHubViewController: UIViewController {
                 }
             }
         })
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
